@@ -19,54 +19,61 @@
 </script>
 
 <template>
-  <div>
+  <div class="container text-center">
     <form @submit.prevent="buscar">
-      <label for="busca"><h1>Procurador de CEP</h1></label><br>
-      <input type="number" v-model="cep" class="busca" placeholder="99999999"><br>
-      <button type="submit">Buscar</button>
-    </form><br>
-    <form class="end">
-      <label for="rua">Rua:</label><br><input type="text" v-model="endereco.logradouro" /><br>
-      <label for="bairro">Bairro:</label><br><input type="text" v-model="endereco.bairro" /><br>
-      <label for="cidade">Cidade:</label><br><input type="text" v-model="endereco.localidade" /><br>
-      <label for="num">Estado:</label><br><input type="text" v-model="endereco.uf"><br>
+      <p class="text-uppercase fs-1 fst-italic">Procurador de CEP</p>
+      <input type="number" v-model="cep" class="busca col-2 text-center form-control" placeholder="99999999"><br>
+      <button type="submit" class="btn btn-success col-1">Buscar</button>
     </form>
+    <div class="container col-6">
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">CEP</li>
+        <input class="list-group-item" type="text" v-model="endereco.cep">
+      </ul>
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item">Rua</li>
+        <input class="list-group-item" type="text" v-model="endereco.logradouro">
+      </ul>
+      <ul class="list-group list-group-horizontal-md">
+        <li class="list-group-item">Bairro</li>
+        <input class="list-group-item" type="text" v-model="endereco.bairro">
+      </ul>
+      <ul class="list-group list-group-horizontal-lg">
+        <li class="list-group-item">Cidade</li>
+        <input class="list-group-item" type="text" v-model="endereco.localidade">
+      </ul>
+      <ul class="list-group list-group-horizontal-xl">
+        <li class="list-group-item">Estado</li>
+        <input class="list-group-item" type="text" v-model="endereco.uf">
+      </ul>
+    </div>
+    <img src="https://c.tenor.com/cCADMf95jDsAAAAM/alien-dance.gif" class="img-fluid" />
+    <img src="https://c.tenor.com/cCADMf95jDsAAAAM/alien-dance.gif" class="img-fluid" />
+    <img src="https://c.tenor.com/cCADMf95jDsAAAAM/alien-dance.gif" class="img-fluid" />
+    <img src="https://c.tenor.com/cCADMf95jDsAAAAM/alien-dance.gif" class="img-fluid" />
+    <img src="https://c.tenor.com/cCADMf95jDsAAAAM/alien-dance.gif" class="img-fluid" />
   </div>
 </template>
 
 <style scoped>
 
-  div{
-    text-align: center;
+  .container{
     justify-content: center;
-    margin-top: 11%;
+    margin-top: 5%;
     font-size: 20px;
   }
 
-  input {
-    width: 1000px;
-    font-size: 24px;
+  form button {
+    margin-top: 10px;
+  }
+
+  .list-group-item {
     text-align: center;
+    width: 100%;
   }
 
-  button {
-    width: 100px;
-    font-size: 20px;
-    border: solid grey 1px;
-    border-radius: 7px;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-    cursor: pointer;
-    transition: 0.25s;
-  }
-
-  button:hover {
-    transform: scale(1.1);
-  }
-
-  input {
-    margin-bottom: 20px;
-    border: 0;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  ul li {
+    background-color: rgb(233, 233, 233);
   }
 
 </style>
